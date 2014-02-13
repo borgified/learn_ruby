@@ -21,7 +21,6 @@ def first_word(string)
 end
 
 def titleize(string)
-	string[0]=string[0].upcase
-	string.split(' ')[0]
-	return string
+	result = string.split(' ').each { |x| x[0]=x[0].upcase }.join(' ')
+	return result
 end
