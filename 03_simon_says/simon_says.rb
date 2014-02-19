@@ -21,6 +21,12 @@ def first_word(string)
 end
 
 def titleize(string)
-	result = string.split(' ').each { |x| x[0]=x[0].upcase }.join(' ')
-	return result
+	result = string.split(' ').each do |x|
+		if (x == "and" or x == "the" or x == "over")
+		else
+				x[0]=x[0].upcase
+		end
+	end
+	result.first.capitalize!
+	return result.join(' ')
 end
